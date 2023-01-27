@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TrainerController;
 use App\Http\Controllers\MembershipController;
+use App\Http\Controllers\MemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,5 @@ Route::get('/member', function(){
 Route::post('/createtrainer', [TrainerController::class, 'create'])->name('createtrainer');
 
 Route::get('/memberstype', [MembershipController::class, 'memberstype'])->name('memberstype');
+
+Route::post('createmember',[MemberController::class, 'createmember'])->name('createmember');
